@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %} <!-- New line -->
+
+
+<html>
+    <head>
+    <title>Results</title>
+        <link href="{% static "CSS/maincss.css" %}" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+        <div id="top-header">
+            <div id="topbar-content">
+                <div id="logo">
+                <img id="logo-image"src="{% static "images/smartcitylogo.png" %}">
+                </div>
+                <div>
+                    <h1 id="logo-name">SERCHO</h1>
+                </div>
+                    <input id="search-box" type="text" placeholder=" Search Here" >
+                    <button id="search-button" type="submit" value="submit" name="search-button"><i class="fa fa-search" aria-hidden="true" style="font-size:45px;"></i></button>
+                <div id="signin-buttons">
+                    <a href="signinpage.html ">Sign in</a>
+                    <a href="signinpage.html#signup">Sign up</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="main-content" style="height:850px">
+            <div id="results">
+                <div id="result-heading">
+                <p>RBWH- Royal Brisbane &amp; Womans Hospital</p>
+                </div>
+                <div >
+                <img src="image/RBWH.jpg" id="result-image">
+                </div>
+                <div id="result-info">
+                    <p id="resultinfo">Information</p>
+                    <p style="margin:10px"> Address :   Butterfield St &amp; Bowen Bridge Rd Herston QLD, 4029. </p>
+                    <p style="margin:10px;">contact info: 0434745445</p>
+                    <img src="image/RBWH-map.png" id="place-map">
+                </div>
+                <div id="userreview-input">
+                    <p id="review-input-heading">Give your Review here: </p>
+                    <p>
+                        <textarea id="review-input"></textarea>
+                        <button type="submit" id="review-input-submit"> Submit Your Review</button>
+
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="footer">
+            <div id="quick-links">
+                <table id="quick-links-table">
+                  <tr>
+                    <th><a href="signinpage.html">Sign in</a></th>
+                    <th><a href="signinpage.html#signup">Sign up</a></th>
+                    <th><a href="">About Us</a></th>
+                  </tr>
+                </table>
+            </div>
+        </div>
+
+    </body>
+
+
+</html>

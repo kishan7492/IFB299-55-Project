@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %} <!-- New line -->
+
+<html>
+        <head>
+            <title> Smart City </title>
+            <link href="{% static "CSS/maincss.css" %}" rel="stylesheet" type="text/css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        </head>
+        <body>
+            <div id="top-header">
+                <div id="topbar-content">
+                    <div id="logo">
+                        <img id="logo-image" src="{% static "images/smartcitylogo.png" %}" alt="Picture of Rango" /> <!-- New line -->
+                        <h1 id="logo-name">Smart City</h1>
+                    <div id="signin-buttons">
+                        <a href="">Sign in</a>
+                        <a href="">Sign up</a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="content">
+                <div id = "main-search">
+                    <input id="main-search-box" type="text" placeholder="Search Here">
+                    <button id="main-search-button" type="submit" value="submit" name="search-button" action = "search-results-page.html"><i class="fa fa-2x fa-search" aria-hidden="true"></i></button>
+                </div>
+                <div>
+                    <p id="suburb">Suburbs
+                        <select name="suburb" >
+                            <option value="Brisbane">Brisbane</option>
+                            <option value="WestEnd">West End</option>
+                            <option value="NewFarm">New Farm</option>
+                        </select>
+                        &nbsp; &nbsp; &nbsp;
+                        Postcode
+                        <input type="text" name="postcode" id="postcode" placeholder="Postcode">
+                        &nbsp; &nbsp;
+                        Within
+                        <select name="suburb" >
+                            <option value="5">5 km</option>
+                            <option value="10">10 km</option>
+                            <option value="15">15 km</option>
+                            <option value="5">20 km</option>
+                            <option value="10">25 km</option>
+                            <option value="15">30 km</option>
+                            <option value="5">40 km</option>
+                            <option value="10">50 km</option>
+
+                        </select>
+                        &nbsp; &nbsp;
+                        Rating
+                         <select name="rating" >
+                            <option value="5">5 Star</option>
+                            <option value="10">4 Star</option>
+                            <option value="15">3 Star</option>
+                            <option value="5">2 Star</option>
+                            <option value="10">1 Star</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+            <div id="footer">
+                <div id="quick-links">
+                    <table id="quick-links-table">
+                      <tr>
+                        <th><a id="footer-signin" href="signinpage.html">Sign in</a></th>
+                        <th><a id="footer-signup" href="signinpage.html#signup">Sign up</a></th>
+                        <th><a id="footer-aboutus" href=" ">About Us</a></th>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+        </body>
+
+    </html>

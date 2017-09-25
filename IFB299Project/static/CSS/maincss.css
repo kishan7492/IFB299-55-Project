@@ -1,0 +1,406 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Arial, freesans, helvetica
+}
+input:focus, button:focus{
+    outline:none;
+}
+#top-header{
+    width: 100%;
+    height: 100px;
+    background-color: #800080;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+}
+
+#topbar-content{
+    max-width: 1300px;
+    width: auto;
+    height: 100px;
+    margin: 0 auto;
+}
+#logo-image{
+    width: 119px;
+    height: 70px;
+    margin: auto 0;
+    margin-top: 10px;
+    float: left;
+
+}
+#logo-name{
+    padding: 28px 15px 35px 15px;
+    color: white;
+    float: left;
+    margin: auto 0;
+
+
+}
+#signin-buttons{
+    margin: 28px 5px 28px 5px;
+    float: right;
+}
+#signin-buttons a{
+    padding: 10px;
+    float: right;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 200;
+}
+#signin-buttons a:hover {
+    background-color: #ffffff;
+    color: #A70000;
+    font-weight: bold;
+    border-radius: 0.5em;
+}
+hr{
+    border-color: black;
+    border: solid 3px;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+#content{
+   width: auto;
+    display: block;
+    height: 250px;
+    position: relative;
+}
+#main-search{
+    /*position:relative;
+    margin-top: 250px;
+    left: 50%;
+    transform: translatex(-20%);*/
+    display: table;
+    margin: 0 auto;
+    margin-top: 175px;
+    /*margin-left: 10px;*/
+}
+#main-search-box, #postcode, select {
+    border-radius: 1em;
+    border: solid 0.5px lightgray;
+    box-shadow: 2px 2px 4px #888888;
+}
+select, #main-search-box::-webkit-input-placeholder, #postcode::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font-weight: 100;
+}
+select, #main-search-box:-moz-placeholder, #postcode:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   font-weight: 100;
+}
+select, #main-search-box::-oz-placeholder, #postcode::-oz-placeholder { /* Mozilla Firefox 19+ */
+   font-weight: 100;
+}
+select, #main-search-box:-ms-input-placeholder, #postcode:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   font-weight: 100;
+}
+#postcode, select {
+	height: 30px;
+    padding-left: 10px;
+}
+#main-search-box {
+    max-width: 1000px;
+    min-width: 500px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+#search-box{
+    max-width: 1000px;
+    min-width: 500px;
+    height: 50px;
+    margin-top: 24px;
+    margin-left: 100px;
+    float: left;
+    font-size: 20px;
+    border: none;
+}
+#search-button{
+    background-color: #ffffff;
+    border: none;
+    margin-top: 24px;
+    margin-left: -5;
+}
+#search-image{
+    height: 43px;
+    width: 40px;
+    margin-top: 5px;
+    float: left;
+}
+#main-search-button{
+    background-color: transparent;
+    color: lightgray;
+    font-weight: 100;
+    border: solid 0.5px lightgray;
+    box-shadow: 2px 2px 4px #888888;
+    padding: 13px;
+    border-radius: 1.8em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+#suburb{
+    margin: 0 auto;
+    display: table;
+    margin-top: 20px;
+}
+#placetypediv{
+    margin-left: 320px;
+}
+#postcode{
+    width: 100px;
+}
+#quick-links{
+    background-color: #800080;
+    /*margin: 20px;*/
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+}
+#main-content{
+    background-color: #E6E6E6;
+    height: 1200px;
+    width: auto;
+    display: block;
+    padding: 75px;
+}
+h1{
+    text-align: center;
+    color: #800080;
+}
+#signin{
+    width: 800px;
+    height: 380px;
+    margin-top:100px !important;
+    margin: 0em auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 1em;
+    color: #800080;
+    font-weight:500;
+    font-size: 25px;
+}
+#signinsubmit{
+    height: 50px;
+    width: 140px;
+    border-radius: 1em;
+    border: none;
+    color: #ffffff;
+    background-color: #800080;
+    float: right;
+    margin-right: 70px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.signininput{
+    border-radius: 0.6em;
+    box-shadow: none;
+    margin: 5px;
+    margin-left: 0;
+    border-width: 1px;
+    border-style: groove;
+    height: 45px;
+    width: 400px;
+    font-size: 18px;
+}
+#forgotpswrd{
+    font-size: 18px;
+    text-decoration: none;
+}
+#forgotpswrd a{
+    text-decoration: none;
+    color: #800080;
+}
+#signup{
+    width: 900px;
+    height: 500px;
+    margin: 5em auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 1em;
+    color: #800080;
+    font-weight:500;
+    font-size: 20px;
+}
+.signupinput{
+    border-radius: 0.4em;
+    box-shadow: none;
+    margin: 8px;
+    margin-left: 0;
+    border-width: 1px;
+    border-style:ridge;
+    height: 30px;
+    width: 280px;
+    font-size: 14px;
+}
+#signupsubmit{
+    height: 50px;
+    width: 140px;
+    border-radius: 1em;
+    border: none;
+    color: #ffffff;
+    position: relative;
+    left: 40%;
+    background-color: #800080;
+    margin-right: 70px;
+    font-size: 18px;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+input {
+    border: 1px solid;
+}
+#password{
+    float: right;
+    margin-right: 30px;
+
+}
+#confirm-password{
+    float: right;
+     margin-right: 30px;
+}
+#map{
+    height: 400px;
+    width: 1000px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+#search-results{
+    height: 100px;
+    width: auto;
+    margin-top:50px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 1em;
+    font-weight:500;
+}
+#search-result-heading{
+    color: #800080;
+    font-weight:500;
+    font-size: 18px;
+}
+#search-result-address{
+    color: #800080;
+    font-size: 12px;
+}
+#search-result-address-1{
+    color: #A70000;
+    font-size: 16px;
+}
+#results{
+    height: 700px;
+    width: auto;
+    margin-top:20px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 1em;
+}
+#result-heading{
+    text-align: center;
+    font-size: 37px;
+    font-weight: 700;
+    color: #800080;
+}
+#result-image{
+    width: 500px;
+    height: 400px;
+}
+#result-info{
+    position: relative;
+    height: 400px;
+    width: 600px;
+    display: block;
+    margin-top:-400px;
+    margin-right:80px;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    float: right;
+    font-size: 18px;
+}
+#resultinfo{
+    color: #800080;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+#review-input{
+    height: 100px;
+    width:800px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: #800080;
+}
+#review-input-heading{
+    font-size: 25px;
+    font-weight: 700;
+    color: #800080;
+}
+#review-input-submit{
+    height: 60px;
+    width: 250px;
+    margin-right: 40px;
+    margin-top: 20px;
+    background-color: #800080;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+}
+#place-map {
+    height: 240px;
+    width: 400px;
+    margin-left: 100px;
+}
+body > #footer > #quick-links > #quick-links-table > tbody > tr > th {
+    padding-right: 50px;
+    color: white;
+    font-weight: 200;
+}
+body > #footer > #quick-links > #quick-links-table > tbody > tr > th > a {
+	color: white;
+	font-weight: 200;
+	text-decoration: none;
+}
+body > #footer > #quick-links > #quick-links-table > tbody > tr > th:nth-child(3) {
+    border-right: 0;
+}
+#footer > #quick-links > #quick-links-table {
+    width: 100%;
+
+}
+#quick-links-table {
+    height: 70px;
+    background-color: #800080;
+    color: #ffffff;;
+}
+body > #footer > #quick-links > #quick-links-table > tbody > tr > th:hover, body > #footer > #quick-links > #quick-links-table > tbody > tr > th:hover a {
+	color: white;
+	border: none;
+	background: white;
+
+}
+#footer {
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+    color: white;
+}
+
+.validatormsg{
+    color: black !important;
+    font-size: 19px !important;
+}
+#footer-signin{
+    color: #ffffff;
+     text-decoration: none;
+}
+#footer-signup{
+    color: #ffffff;
+    text-decoration: none;
+}
+#footer-aboutus{
+    color: #ffffff;
+    text-decoration: none;
+}

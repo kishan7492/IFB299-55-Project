@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %} <!-- New line -->
+
+
+<html>
+    <head>
+    <title>Search Result</title>
+        <link href="{% static "CSS/maincss.css" %}" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="mainjavascript.js"></script>
+
+    </head>
+
+    <body>
+        <div id="top-header">
+            <div id="topbar-content">
+                <div id="logo">
+                <img id="logo-image"src="{% static "images/smartcitylogo.png" %}">
+                </div>
+                <div>
+                    <h1 id="logo-name">SERCHO</h1>
+                </div>
+                    <input id="search-box" type="text" placeholder=" Search Here" >
+                    <button id="search-button" type="submit" value="submit" name="search-button"><i class="fa fa-search" aria-hidden="true" style="font-size:45px;"></i></button>
+                <div id="signin-buttons">
+                    <a href="signinpage.html ">Sign in</a>
+                    <a href="signinpage.html#signup">Sign up</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="main-content" style="height:800px;">
+            <div id="map"></div>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB_iesKkPt3nROMf0Vlgwln3ZERTDCE5I&callback=initMap">
+            </script>
+            <hr style="margin:3px; width:100%;" >
+            <div id="search-results">
+               <a href= "result_page.html"id="search-result-heading">RBWH - Royal Brisbane &amp; Woman Hospital </a>
+                <p id="search-result-address"><span id="search-result-address-1">Address :</span>  Butterfield St &amp; Bowen Bridge Rd
+                    Herston QLD 4029
+                    Australia</p>
+            </div>
+            <div id="search-results">
+                <p id="search-result-heading">Result 2 </p>
+                <p id="search-result-address"><span id="search-result-address-1">Address :</span> result 2 adress</p>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="quick-links">
+                <table id="quick-links-table">
+                  <tr>
+                    <th><a href="signinpage.html">Sign in</a></th>
+                    <th><a href="signinpage.html#signup">Sign up</a></th>
+                    <th><a href=" ">About Us</a></th>
+                  </tr>
+                </table>
+            </div>
+        </div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -27.4698, lng: 153.0251};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+
+    </body>
+
+
+
+</html>
