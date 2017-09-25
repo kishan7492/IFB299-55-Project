@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'IFB299Project',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,7 @@ PROJECT_PATH = os.path.abspath(PROJECT_PATH)
 
 TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 
-TEMPLATE_DIRS = (
+TEMPLATE_DIR = (
    TEMPLATE_PATH,
 )
 
