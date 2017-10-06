@@ -30,6 +30,6 @@ class users(models.Model):
     Username = models.CharField(max_length = 400)
     Email = models.EmailField
     name = models.CharField(max_length=30)
-    typwOfUser = models.CharField(max_length=15)
+    typwOfUser = models.CharField(max_length=15)    
     def __unicode__(self):
         return self.userID

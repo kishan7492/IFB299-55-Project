@@ -7,5 +7,5 @@ from django.shortcuts import render_to_response
 def index(request, *args, **kwargs):
     context = RequestContext(request)
     context_dict = {'boldmessage': "I am bold font from the context"}
-    return render_to_response('/Users/kishanvirani/Documents/IFB299Project/templates/search_result_page.html',
+    return render_to_response('search_result_page.html',
                               context_dict, context)
