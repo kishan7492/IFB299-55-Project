@@ -4,7 +4,7 @@
         <meta CHARSET="UTF-8">
           <meta name="description" content="login page of searcho">
           <meta name="keywords" content="HTML,CSS,PHP,JavaScript,MYsql">
-          <meta name="author" content="Kishan virani, Shivam  sachdeva ">
+          <meta name="author" content="Arshdeep Singh">
     <title>Sign in</title>
         <link href="css/maincss.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
