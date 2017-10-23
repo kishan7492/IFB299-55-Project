@@ -18,7 +18,7 @@
                     <div id="signin-buttons">
 
                         <a href="{% url 'signin' %}">Sign in</a>
-                        <a href="">Sign up</a>
+                        <a href="{% url 'signup' %}">Sign up</a>
                     </div>
                 </div>
 
@@ -67,8 +67,8 @@
                 <div id="quick-links">
                     <table id="quick-links-table">
                       <tr>
-                        <th><a id="footer-signin" href="signinpage.html">Sign in</a></th>
-                        <th><a id="footer-signup" href="signinpage.html#signup">Sign up</a></th>
+                        <th><a id="footer-signin" href="{% url 'signin' %}">Sign in</a></th>
+                        <th><a id="footer-signup" href="{% url 'signup' %}">Sign up</a></th>
                         <th><a id="footer-aboutus" href=" ">About Us</a></th>
                       </tr>
                     </table>
