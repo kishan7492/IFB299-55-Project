@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-{% load static %} <!-- New line -->
+{% load static %}
+
+<!-- New line -->
 
 <html>
         <head>
@@ -14,7 +16,8 @@
                         <img id="logo-image" src="{% static "images/smartcitylogo.png" %}" alt="Picture of Rango" /> <!-- New line -->
                         <h1 id="logo-name">Smart City</h1>
                     <div id="signin-buttons">
-                        <a href="">Sign in</a>
+
+                        <a href="{% url 'signin' %}">Sign in</a>
                         <a href="">Sign up</a>
                     </div>
                 </div>

@@ -28,11 +28,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^mainviews', mainviews.index, name='index'),
-    url(r'^$', mainviews.index, name='index'),
-    url(r'^signup', signup_views.index, name='index'),
-    url(r'^signin', signin_views.index, name='index'),
-    url(r'^search_result', search_resultviews.index, name='index'),
-    url(r'^result', resultviews.index, name='index'),
+    url(r'^mainviews', mainviews.index, name='mainpage'),
+    url(r'^$', mainviews.index, name='mainpage'),
+    url(r'^signup', signup_views.index, name='signup'),
+    url(r'^signin', signin_views.index, name='signin'),
+    url(r'^search_result', search_resultviews.index, name='searchresult'),
+    url(r'^result', resultviews.index, name='result'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
