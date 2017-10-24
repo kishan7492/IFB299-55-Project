@@ -7,7 +7,7 @@ from IFB299Project.models import Placeinformation
 
 def index(request, *args, **kwargs):
     context = RequestContext(request)
-    placelist = Placeinformation.Placename
-    context_dict = {'places':placelist}
+    placelist = Placeinformation.Placename.capitalize()
+    context_dict = {'Places': placelist}
     return render_to_response('smart_city.html',
                               context_dict)
