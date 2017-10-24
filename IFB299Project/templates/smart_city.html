@@ -67,6 +67,20 @@
                     </p>
                 </div>
             </div>
+                <div>
+                    {% if Places %}
+                    <ul>
+                        dljfl
+                        {% for Placeinformations in Places %}
+                            <li>
+                                {{ Placeinformations.Placename }}
+                            </li>
+                        {% endfor %}
+                        {% else %}
+                            <strong>There are no categories present.</strong>
+                    {% endif %}
+                    </ul>
+                </div>
             <div id="footer">
                 <div id="quick-links">
                     <table id="quick-links-table">

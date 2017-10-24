@@ -44,7 +44,7 @@
                     <tr >
 
                         <td id="search-results">
-                            <a id="search-result-heading" href="result_page.php?ID=<?=$_POST['$parkid']?>">{{ Placeinformations.Placename }}</a>
+                            <a id="search-result-heading" href="{% url 'result' %}">{{ Placeinformations.Placename }}</a>
                             &nbsp;
 
                             <p style="color: black"><span id="address">ADDRESS: </span></p>
@@ -56,6 +56,7 @@
                         {% else %}
                             <strong>There are no categories present.</strong>
                     {% endif %}
+
                 </tbody>
             </table>
         </div>

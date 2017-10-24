@@ -3,9 +3,10 @@ from django.views.generic.base import *
 #from django.contrib.staticfiles import *
 from django.template import RequestContext
 from django.shortcuts import render_to_response
+from IFB299Project.models import Placeinformation
 
 def index(request, *args, **kwargs):
-    context = RequestContext(request)
-    context_dict = {'boldmessage': "I am bold font from the context"}
+    placelist = Placeinformation.objects.all()
+    context_dict = {'Places': placelist}
     return render_to_response('search_result_page.html',
-                              context_dict, context)
+                              context_dict)
