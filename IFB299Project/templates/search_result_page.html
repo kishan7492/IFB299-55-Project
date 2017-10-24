@@ -37,16 +37,27 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB_iesKkPt3nROMf0Vlgwln3ZERTDCE5I&callback=initMap">
             </script>
             <hr style="margin:3px; width:100%;" >
-            <div id="search-results">
-               <a href= "result_page.html"id="search-result-heading">RBWH - Royal Brisbane &amp; Woman Hospital </a>
-                <p id="search-result-address"><span id="search-result-address-1">Address :</span>  Butterfield St &amp; Bowen Bridge Rd
-                    Herston QLD 4029
-                    Australia</p>
-            </div>
-            <div id="search-results">
-                <p id="search-result-heading">Result 2 </p>
-                <p id="search-result-address"><span id="search-result-address-1">Address :</span> result 2 adress</p>
-            </div>
+            <table >
+                <tbody>
+                    {% if Places %}
+                    {% for Placeinformations in Places %}
+                    <tr >
+
+                        <td id="search-results">
+                            <a id="search-result-heading" href="result_page.php?ID=<?=$_POST['$parkid']?>">{{ Placeinformations.Placename }}</a>
+                            &nbsp;
+
+                            <p style="color: black"><span id="address">ADDRESS: </span></p>
+                            <p style="color: black">Parkcode:  </p>
+
+                        </td>
+                    </tr>
+                    {% endfor %}
+                        {% else %}
+                            <strong>There are no categories present.</strong>
+                    {% endif %}
+                </tbody>
+            </table>
         </div>
         <div id="footer">
             <div id="quick-links">
