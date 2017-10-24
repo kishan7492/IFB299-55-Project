@@ -16,7 +16,7 @@ class Page(models.Model):
         return self.title
 
 class Placeinformation(models.Model):
-    Placename = models.CharField(max_length = 300)
+    Placename = models.CharField(max_length = 300, unique= True)
     address = models.CharField(max_length = 400)
     description = models.CharField(max_length = 400)
     long = models.CharField(max_length=15)
