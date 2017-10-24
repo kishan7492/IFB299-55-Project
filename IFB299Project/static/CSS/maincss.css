@@ -267,7 +267,7 @@ input {
 }
 #search-results{
     height: 100px;
-    width: 300px;
+    width: auto;
     margin-top:50px;
     padding: 25px;
     background-color: #ffffff;
