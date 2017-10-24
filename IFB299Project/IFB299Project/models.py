@@ -28,13 +28,14 @@ class Placeinformation(models.Model):
         return self.Placename
 
 class users(models.Model):
-    userID = models.CharField(max_length = 300)
+    ID = models.AutoField
     Username = models.CharField(max_length = 400)
     Email = models.EmailField
     name = models.CharField(max_length=30)
-    typwOfUser = models.CharField(max_length=15)    
+    typwOfUser = models.CharField(max_length=15)
+    PASSWO = models.CharField(max_length=9, null=False)
     def __unicode__(self):
-        return self.userID
+        return self.Username
 
 def save(self, *args, **kwargs):
     self.slug = slugify(self.name)
