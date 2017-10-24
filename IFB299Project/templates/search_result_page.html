@@ -44,9 +44,9 @@
                     <tr >
 
                         <td id="search-results">
-                            <a id="search-result-heading" href="{% url 'result' %}">{{ Placeinformations.Placename }}</a>
-                            &nbsp;<a id="search-result-heading" href="{% url 'result' %}">{{ Placeinformations.id }}</a>
-                            &nbsp;<a id="search-result-heading" href="/result/{{ Placeinformations.id }}">{{ Placeinformations.id }}</a>
+                            <a id="search-result-heading" href="show_result/{{ Placeinformations.id }}">{{ Placeinformations.Placename }}</a>
+                            <a id="search-result-heading" href="show_result/{{ Placeinformations.id }}">{{ Placeinformations.id }}</a>
+                            <a id="search-result-heading" href=" show_result/{{ Placeinformations.id }}">{{ Placeinformations.id }}</a>
                             <p style="color: black"><span id="address">ADDRESS: </span></p>
                             <p style="color: black">Parkcode:  </p>
 

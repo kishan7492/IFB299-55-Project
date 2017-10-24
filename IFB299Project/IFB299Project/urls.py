@@ -34,6 +34,6 @@ urlpatterns = [
     url(r'^signin', signin_views.index, name='signin'),
     url(r'^search_result', search_resultviews.index, name='searchresult'),
     #url(r'^result', resultviews.index, name='result'),
-    url(r'^result/(?P<ID>[1-9]+)/$',resultviews.show_result, name='show_category'),
+    url(r'^Show_result/(?P<ID>[1-9]+)/$',resultviews.show_result, name='show_result'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

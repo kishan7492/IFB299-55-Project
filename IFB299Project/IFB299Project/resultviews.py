@@ -10,5 +10,26 @@ def index(request, *args, **kwargs):
     context_dict = {'boldmessage': "I am bold font from the context"}
     return render_to_response('result_page.html',
                               context_dict, context)
-#def show_result(request, ID):
+def show_result(request, ID):
+    context_dict = {}
 
+    try:
+        # Can we find a category name slug with the given name?
+        # If we can't, the .get() method raises a DoesNotExist exception.
+        # So the .get() method returns one model instance or raises an exception.
+        result = Placeinformation.objects.get(placeID = ID)
+        # Retrieve all of the associated pages.
+        # Note that filter() will return a list of page objects or an empty list
+        ###pages = Page.objects.filter(category=category)
+        # Adds our results list to the template context under name pages.
+        context_dict['result'] = result
+        # We also add the category object from
+        # the database to the context dictionary.
+        # We'll use this in the template to verify that the category exists. context_dict['category'] = category
+    except Placeinformation.DoesNotExist:
+
+        context_dict['result'] = None
+    # Go render the response and return it to the client.
+
+
+    return render_to_response(request, 'result_page.html', context_dict)
