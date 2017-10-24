@@ -1,4 +1,5 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 
 class Category(models.Model):
 
@@ -16,6 +17,7 @@ class Page(models.Model):
         return self.title
 
 class Placeinformation(models.Model):
+    placeID = models.AutoField
     Placename = models.CharField(max_length = 300, unique= True)
     address = models.CharField(max_length = 400)
     description = models.CharField(max_length = 400)
@@ -33,3 +35,7 @@ class users(models.Model):
     typwOfUser = models.CharField(max_length=15)    
     def __unicode__(self):
         return self.userID
+
+def save(self, *args, **kwargs):
+    self.slug = slugify(self.name)
+    super(Placeinformation, self).save(*args, **kwargs)
