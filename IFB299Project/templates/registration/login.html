@@ -34,25 +34,12 @@
         </div>
         <hr>
         <div id="main-content">
-            <form id="signin" name="signin" onsubmit="return validateFormSignin()">
-                <h1>Sign in</h1>
-                User ID:
-                <br>
-                <input type="text" placeholder=" Please Enter Email" class="signininput" id="user   id" name="email"><span id="emailvalidator" class="validatormsgeml"> </span>
-                <br>
-                <br>
-                Password:
-                <br>
-                <input type="password" placeholder="Password"  class="signininput"id="signinpassword" name="password" ><span class="validatormsgpwd" id="passvalidator"> </span>
-                <br>
-                <button id="signinsubmit" type="submit"  value="signin" >Sign in</button>
-                <p id="forgotpswrd"><a href="#signupsubmit">Forgot Password ?</a></p>
-            </form>
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+          </form>
 
-
-            <script type="text/javascript">
-            document.getElementById("signinsubmit").onclick =
-            </script>
         </div>
         <div id="footer">
             <div id="quick-links">
