@@ -28,14 +28,14 @@
             <div id="content">
                 <div id = "main-search">
                     <input id="main-search-box" type="text" placeholder="Search Here" >
-                    <a href="{% url 'searchresult' %}">
+                    <a href="">
                         <button id="main-search-button" type="submit" value="submit" name="search-button" action = "search-results-page.html"><i class="fa fa-2x fa-search" aria-hidden="true"></i></button>
                     </a>
                 </div>
                 <div>
 
 
-                     <form id="searchform" action="{% url 'searchresult' %}" method="get" accept-charset="utf-8">
+                     <form id="searchform" action="{% url 'searchresult' a%}" method="get" accept-charset="utf-8">
                         <button class="searchbutton" type="submit">
                         <i class="fa fa-search"></i>
                         </button>
