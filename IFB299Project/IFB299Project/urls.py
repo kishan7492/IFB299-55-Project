@@ -26,7 +26,9 @@ from django.conf.urls.static import static
 
 from IFB299Project import signup_views as signup_views
 
-
+from django.conf.urls import url
+from django.contrib import admin
+from django.contrib.auth import views as signin_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -34,9 +36,9 @@ urlpatterns = [
     url(r'^$', mainviews.index, name='mainpage'),
     url(r'^signup/$', signup_views.signup, name='signup'),
 
+    url(r'^login/$', signin_views.login, name='signin'),
+    url(r'^signout/$', signin_views.logout, name='signout'),
 
-
-    url(r'^signin', signin_views.index, name='signin'),
     url(r'^search_result', search_resultviews.index, name='searchresult'),
     #url(r'^result', resultviews.index, name='result'),
     url(r'^show_result/(?P<ID>[1-9]+)$',resultviews.show_result, name='show_result'),
