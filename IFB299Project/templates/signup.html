@@ -7,7 +7,7 @@
     <title>Sign in &amp; Sign up</title>
         <link href="{% static "CSS/maincss.css" %}" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--        <script src="mainjavascript.js"></script>-->
+
 
     </head>
 
@@ -49,14 +49,14 @@
                             {% for error in field.errors %}
                               <p style="color: red">{{ error }}</p>
                             {% endfor %}
-                          </p>
+
                         {% endfor %}
                     <button type="submit" id="signupsubmit">Sign up</button>
+
+              </p>
               </form>
 
-            <script type="text/javascript">
-            document.getElementById("signinsubmit").onclick
-            </script>
+
         </div>
         <div id="footer">
             <div id="quick-links">

@@ -9,7 +9,7 @@
     <title>Sign in &amp; Sign up</title>
         <link href="{% static "CSS/maincss.css" %}" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="mainjavascript.js"></script>
+
 
     </head>
 
@@ -41,10 +41,12 @@
         </div>
         <hr>
         <div id="main-content">
-          <form method="post">
+
+          <form method="post" id="signin" >
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Login</button>
+
+            <button type="submit" id="signupsubmit">Login</button>
           </form>
 
         </div>
