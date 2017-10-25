@@ -42,8 +42,8 @@
                 </div>
                 <div id="result-info">
                     <p id="resultinfo">Information About Place</p>
-                    <p style="margin:10px"> Address : {{ result.Address }} </p>
-                    <p style="margin:10px;">contact info: 0434745445</p>
+                    <p style="margin:10px"> Address : {{ result.address }} </p>
+                    <p style="margin:10px;">Type of the place : {{ result.Placename }}</p>
 
                 </div>
                 <div id="userreview-input">
@@ -57,9 +57,9 @@
                 </div>
             </div>
 
-                        {% else %}
-                            <strong>There are no categories present.</strong>
-                    {% endif %}
+            {% else %}
+                <strong>There are no categories present.</strong>
+             {% endif %}
 
         </div>
         <div id="footer">

@@ -26,7 +26,6 @@ class Placeinformation(models.Model):
     typeOfPlace = models.CharField(max_length=15)
     def __unicode__(self):
         return self.Placename
-
 class users(models.Model):
     ID = models.AutoField
     Username = models.CharField(max_length = 400)
