@@ -31,9 +31,11 @@
         </div>
         <hr>
         <div id="main-content" style="height:850px">
+             {% if result %}
+
             <div id="results">
                 <div id="result-heading">
-                <p>RBWH- Royal Brisbane &amp; Womans Hospital</p>
+                <p>{{ Placeinformations.Placename }}</p>
                 </div>
                 <div >
                 <img src="image/RBWH.jpg" id="result-image">
@@ -54,6 +56,10 @@
 
                 </div>
             </div>
+
+                        {% else %}
+                            <strong>There are no categories present.</strong>
+                    {% endif %}
 
         </div>
         <div id="footer">
