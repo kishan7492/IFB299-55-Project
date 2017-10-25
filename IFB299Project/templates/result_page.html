@@ -35,16 +35,16 @@
 
             <div id="results">
                 <div id="result-heading">
-                <p>{{ Placeinformations.Placename }}</p>
+                <p>{{ result.Placename }}</p>
                 </div>
                 <div >
                 <img src="image/RBWH.jpg" id="result-image">
                 </div>
                 <div id="result-info">
-                    <p id="resultinfo">Information</p>
-                    <p style="margin:10px"> Address :   Butterfield St &amp; Bowen Bridge Rd Herston QLD, 4029. </p>
+                    <p id="resultinfo">Information About Place</p>
+                    <p style="margin:10px"> Address : {{ result.Address }} </p>
                     <p style="margin:10px;">contact info: 0434745445</p>
-                    <img src="image/RBWH-map.png" id="place-map">
+
                 </div>
                 <div id="userreview-input">
                     <p id="review-input-heading">Give your Review here: </p>
