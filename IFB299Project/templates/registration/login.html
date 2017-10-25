@@ -9,7 +9,7 @@
     <title>Sign in &amp; Sign up</title>
         <link href="{% static "CSS/maincss.css" %}" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="mainjavascript.js"></script>
+
 
     </head>
 
@@ -27,17 +27,26 @@
                     <input id="search-box" type="text" placeholder=" Search Here" >
                     <button id="search-button" type="submit" value="submit" name="search-button"><i class="fa fa-search" aria-hidden="true" style="font-size:45px;"></i></button>
                 <div id="signin-buttons">
-                    <a href="{% url 'signin' %}">Sign in</a>
+
+                        {% if user.is_authenticated %}
+                            <a>Hi {{ user.username }}! </a>
+                              <a href="{% url 'logout' %}">Logout</a>
+                            {% else %}
+                              <a href="{% url 'signin' %}">Login</a>
+                            {% endif %}
+
                     <a href="{% url 'signup' %} ">Sign up</a>
                 </div>
             </div>
         </div>
         <hr>
         <div id="main-content">
-          <form method="post">
+
+          <form method="post" id="signin" >
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Login</button>
+
+            <button type="submit" id="signupsubmit">Login</button>
           </form>
 
         </div>
