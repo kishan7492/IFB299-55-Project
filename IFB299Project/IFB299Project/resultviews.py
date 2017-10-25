@@ -17,7 +17,7 @@ def show_result(request, ID):
         # Can we find a category name slug with the given name?
         # If we can't, the .get() method raises a DoesNotExist exception.
         # So the .get() method returns one model instance or raises an exception.
-        result = Placeinformation.objects.get(id = ID)
+        result = Placeinformation.objects.get(id=ID)
         # Retrieve all of the associated pages.
         # Note that filter() will return a list of page objects or an empty list
         ###pages = Page.objects.filter(category=category)
