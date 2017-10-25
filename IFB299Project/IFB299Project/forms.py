@@ -16,7 +16,7 @@ class SignUpForm(UserCreationForm):
 
     email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
     last_name = forms.CharField(max_length=30, required=False, help_text='Enter your full name')
-    type = forms.ChoiceField(choices=MY_CHOICES)
+    type = forms.ChoiceField(choices=MY_CHOICES, required=True)
 
 class Meta:
         model = User
