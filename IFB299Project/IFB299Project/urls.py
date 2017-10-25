@@ -24,13 +24,18 @@ from django.conf.urls import *
 from django.conf import settings
 from django.conf.urls.static import static
 
+from IFB299Project import signup_views as signup_views
+
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^mainviews', mainviews.index, name='mainpage'),
     url(r'^$', mainviews.index, name='mainpage'),
-    url(r'^signup', signup_views.index, name='signup'),
+    url(r'^signup/$', signup_views.signup, name='signup'),
+
+
+
     url(r'^signin', signin_views.index, name='signin'),
     url(r'^search_result', search_resultviews.index, name='searchresult'),
     #url(r'^result', resultviews.index, name='result'),

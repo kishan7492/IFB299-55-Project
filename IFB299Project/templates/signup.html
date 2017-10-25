@@ -33,40 +33,22 @@
         </div>
         <hr>
         <div id="main-content">
-            <form id="signup" name="signup" onsubmit="return validatesignup()" method="post">
-                <h1>Sign up</h1>
-                <div id="name">
-                    Name*:
-                    <br>
-                    <input type="text" placeholder="Enter Your Name" name="name" id="name-input" class="signupinput"><span id="signupnamevalidator"> </span>
-                </div>
-                <div id="password" >
-                    Password*:
-                    <br>
-                    <input type="password" placeholder="Enter Password" name ="password" id="password-input" class="signupinput"><br><span id="signuppassvalidator"> </span>
-                </div>
-                <br>
-                <div id="email">
-                    Email*:
-                    <br>
-                    <input type="text" placeholder=" Enter Your Email" name ="signupemail" id="email-input" class="signupinput"><span id="signupemailvalidator"> </span>
-                </div>
-                <div id="confirm-password">
-                    Confirm Password*:
-                    <br>
-                    <input type="password" placeholder="Confirm Password" name="conpassword" id="conpassword-input" class="signupinput"><br><span id="signupconpassvalidator"> </span>
-                </div>
-                <br>
-                <div id="city">
-                    Current City:
-                    <br>
-                    <input type="text" placeholder=" Enter Your Current City" name="city" id="city-input" class="signupinput"><span id="cityvalidator"> </span>
-                </div>
-                <br>
-                <button id="signupsubmit" type="submit"  value="signin" >Sign up</button>
 
-
-            </form>
+              <form method="post" id="signup" class="signupinput" style="align-content: center">
+                    {% csrf_token %}
+                    {% for field in form %}
+                          <p id="userid">
+                            {{ field.label_tag }}<br>
+                            {{ field }}
+                            {% if field.help_text %}
+                            {% endif %}
+                            {% for error in field.errors %}
+                              <p style="color: red">{{ error }}</p>
+                            {% endfor %}
+                          </p>
+                        {% endfor %}
+                    <button type="submit" id="signupsubmit">Sign up</button>
+              </form>
 
             <script type="text/javascript">
             document.getElementById("signinsubmit").onclick

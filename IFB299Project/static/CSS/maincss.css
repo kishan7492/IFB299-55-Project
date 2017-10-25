@@ -220,6 +220,7 @@ h1{
     color: #800080;
     font-weight:500;
     font-size: 20px;
+
 }
 .signupinput{
     border-radius: 0.4em;
@@ -404,3 +405,4 @@ body > #footer > #quick-links > #quick-links-table > tbody > tr > th:hover, body
     color: #ffffff;
     text-decoration: none;
 }
+
