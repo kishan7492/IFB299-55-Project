@@ -37,7 +37,8 @@ urlpatterns = [
     url(r'^signup/$', signup_views.signup, name='signup'),
 
     url(r'^login/$', signin_views.login, name='signin'),
-    url(r'^signout/$', signin_views.logout, name='signout'),
+
+    url(r'^logout/$', signin_views.logout, {'next_page': '/'}, name='logout'),
 
     url(r'^search_result', search_resultviews.index, name='searchresult'),
     #url(r'^result', resultviews.index, name='result'),
