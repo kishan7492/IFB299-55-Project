@@ -26,9 +26,25 @@
 
             </div>
             <div id="content">
+
+
+
+                <form id="searchform" action="{% url 'searchresult1' query=1%}" method="get" accept-charset="utf-8">
+                  <button class="searchbutton" type="submit">
+                    <i class="fa fa-search"></i>
+                  </button>
+                  <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
+                </form>
+
+
+
+
+
+
                 <div id = "main-search">
+
                     <input id="main-search-box" type="text" placeholder="Search Here" >
-                    <a href="{% url 'searchresult' %}">
+                    <a href="">
                         <button id="main-search-button" type="submit" value="submit" name="search-button" action = "search-results-page.html"><i class="fa fa-2x fa-search" aria-hidden="true"></i></button>
                     </a>
                 </div>

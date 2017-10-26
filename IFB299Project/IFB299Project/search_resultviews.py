@@ -4,6 +4,7 @@ from django.views.generic.base import *
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from IFB299Project.models import Placeinformation
+import operator
 
 
 def index(request, *args, **kwargs):
@@ -11,7 +12,7 @@ def index(request, *args, **kwargs):
     context_dict = {'Places': placelist}
     return render_to_response('search_result_page.html',
                               context_dict)
-def show_resulttt(request, queryyy):
+def show_resulttt(request, query):
 
     context_dict = {}
 
@@ -20,7 +21,7 @@ def show_resulttt(request, queryyy):
         # If we can't, the .get() method raises a DoesNotExist exception.
         # So the .get() method returns one model instance or raises an exception.
         #keywords = self.request.GET.get(queryyy)
-        result = Placeinformation.objects.get(Placename=queryyy)
+        result = Placeinformation.objects.get(Placename=query)
         # Retrieve all of the associated pages.
         # Note that filter() will return a list of page objects or an empty list
         ###pages = Page.objects.filter(category=category)
