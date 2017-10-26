@@ -12,6 +12,7 @@ def index(request, *args, **kwargs):
     context_dict = {'Places': placelist}
     return render_to_response('search_result_page.html',
                               context_dict)
+
 def show_resulttt(request, query):
 
     context_dict = {}

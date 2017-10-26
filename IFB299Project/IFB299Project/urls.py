@@ -41,9 +41,9 @@ urlpatterns = [
     url(r'^login/$', signin_views.login, name='signin'),
 
     url(r'^logout/$', signin_views.logout, {'next_page': '/'}, name='logout'),
-    url(r'^search_result/$', search_resultviews.index, name='searchresult0'),
-    url(r'^search_result/(?P<query>.+)$', search_resultviews.index, name='searchresult'),
-    url(r'^search_result/(?P<query>.+)$', search_resultviews.show_resulttt, name='searchresult1'),
+    url(r'^search_result', search_resultviews.index, name='searchresult'),
+#    url(r'^search_result/(?P<query>.+)$', search_resultviews.index, name='searchresult'),
+#    url(r'^search_result/(?P<query>.+)$', search_resultviews.show_resulttt, name='searchresult1'),
     url(r'^show_result/(?P<ID>[0-9]+)$',resultviews.show_result, name='show_result'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
