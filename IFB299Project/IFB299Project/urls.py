@@ -40,7 +40,7 @@ urlpatterns = [
 
     url(r'^logout/$', signin_views.logout, {'next_page': '/'}, name='logout'),
 
-    url(r'^search_result/(?P<queryyy>.+)$', search_resultviews.show_resulttt, name='searchresult'),
+    url(r'^search_result', search_resultviews.index, name='searchresult'),
     #url(r'^result', resultviews.index, name='result'),
     url(r'^show_result/(?P<ID>[0-9]+)$',resultviews.show_result, name='show_result'),
 
