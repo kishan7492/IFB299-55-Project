@@ -4,7 +4,6 @@ from django.views.generic.base import *
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from IFB299Project.models import Placeinformation
-from IFB299Project.models import users
 
 
 
