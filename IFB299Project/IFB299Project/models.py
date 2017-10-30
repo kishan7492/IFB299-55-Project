@@ -29,15 +29,6 @@ class Placeinformation(models.Model):
 
 
 
-class users(models.Model):
-    ID = models.AutoField
-    Username = models.CharField(max_length = 400)
-    Email = models.EmailField
-    name = models.CharField(max_length=30)
-    typwOfUser = models.CharField(max_length=15)
-    PASSWO = models.CharField(max_length=9, null=False)
-    def __unicode__(self):
-        return self.Username
 
 def save(self, *args, **kwargs):
     self.slug = slugify(self.name)
@@ -51,17 +42,13 @@ TYPE_CHOICES = (
 
 )
 class NEWACCOUNT(models.Model):
-    USERNAME = models.CharField(max_length=40)
+    USERNAME = models.CharField(max_length=40).null=True
     FIRSTNAME = models.CharField(max_length=40).null=True
     LASTNAME = models.CharField(max_length=40).null=True
     EMAIL = models.EmailField
     PASSWORD = models.CharField(max_length=256)
     REPASSWORD = models.CharField(max_length=256)
-    PHONE = models.IntegerField()
     ADDRESS = models.CharField(max_length=400, null=True)
-    STATE = models.CharField(max_length=8, choices =
-    TYPE_CHOICES, default = 'STUDENT', null=True,)
-    POSTCODE = models.IntegerField()
-    ACCOUNTNO = models.IntegerField(primary_key=True)
+    TYPE = models.CharField(max_length=8, choices = TYPE_CHOICES, default = 'STUDENT', null=True,)
     def __unicode__(self):
         return self.USERNAME
