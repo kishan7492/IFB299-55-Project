@@ -44,8 +44,8 @@
             <hr style="margin:3px; width:100%;" >
             <table >
                 <tbody>
-                {% if Places %}
-                  {% for Placeinformations in Places %}
+                {% if result %}
+                  {% for Placeinformations in result %}
                     <tr >
                         <td id="search-results">
                             <a id="search-result-heading" href="show_result/{{ Placeinformations.id }}">{{ Placeinformations.Placename }}</a>
