@@ -36,7 +36,7 @@
             </div>
         </div>
         <hr>
-        <div id="main-content" style="height:800px;">
+        <div id="main-content" style="height:auto;">
             <div id="map"></div>
             <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB_iesKkPt3nROMf0Vlgwln3ZERTDCE5I&callback=initMap">
@@ -44,14 +44,13 @@
             <hr style="margin:3px; width:100%;" >
             <table >
                 <tbody>
-                    {% if Places %}
-                    {% for Placeinformations in Places %}
+                {% if result %}
+                  {% for Placeinformations in result %}
                     <tr >
-
                         <td id="search-results">
                             <a id="search-result-heading" href="show_result/{{ Placeinformations.id }}">{{ Placeinformations.Placename }}</a>
                             <a id="search-result-heading" href="show_result/{{ Placeinformations.id }}">{{ Placeinformations.id }}</a>
-                            <a id="search-result-heading" href=" show_result/{{ Placeinformations.id }}">{{ Placeinformations.id }}</a>
+                            <a id="search-result-heading" href="show_result/{{ Placeinformations.id }}">{{ Placeinformations.id }}</a>
                             <p style="color: black"><span id="address">ADDRESS: </span></p>
                             <p style="color: black">Parkcode:  </p>
 

@@ -6,6 +6,7 @@ from models import Placeinformation
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 
+from django.views.generic import ListView, DetailView
 
 #class searchdb(queryyy):
         #BlogSearchListView
@@ -13,6 +14,13 @@ from django.shortcuts import render_to_response
 Display a Blog List page filtered by the search query.
 """
 #paginate_by = 10
+
+
+
+
+placelist = ListView.as_view(
+  queryset=Placeinformation.objects.all(),
+)
 
 def get_queryset(query):
         #result = super(searchdb, self).get_queryset()
@@ -25,6 +33,4 @@ def get_queryset(query):
             vector = SearchVector('Placename')
             result = result.annotate(search=vector).filter(search=query)
             context_dict['result'] = result
-
-
         return render_to_response('search_result_page.html', context_dict)
