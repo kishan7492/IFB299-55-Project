@@ -42,3 +42,26 @@ class users(models.Model):
 def save(self, *args, **kwargs):
     self.slug = slugify(self.name)
     super(Placeinformation, self).save(*args, **kwargs)
+
+
+TYPE_CHOICES = (
+    ('STUDENT', 'STUDENT'),
+    ('BUSINESS', 'BUSINESS'),
+    ('TOURIST', 'TOURIST'),
+
+)
+class NEWACCOUNT(models.Model):
+    USERNAME = models.CharField(max_length=40)
+    FIRSTNAME = models.CharField(max_length=40).null=True
+    LASTNAME = models.CharField(max_length=40).null=True
+    EMAIL = models.EmailField
+    PASSWORD = models.CharField(max_length=256)
+    REPASSWORD = models.CharField(max_length=256)
+    PHONE = models.IntegerField()
+    ADDRESS = models.CharField(max_length=400, null=True)
+    STATE = models.CharField(max_length=8, choices =
+    TYPE_CHOICES, default = 'STUDENT', null=True,)
+    POSTCODE = models.IntegerField()
+    ACCOUNTNO = models.IntegerField(primary_key=True)
+    def __unicode__(self):
+        return self.USERNAME
