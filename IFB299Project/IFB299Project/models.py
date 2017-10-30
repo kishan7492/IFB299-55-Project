@@ -51,17 +51,12 @@ TYPE_CHOICES = (
 
 )
 class NEWACCOUNT(models.Model):
-    USERNAME = models.CharField(max_length=40)
-    FIRSTNAME = models.CharField(max_length=40).null=True
-    LASTNAME = models.CharField(max_length=40).null=True
-    EMAIL = models.EmailField
+    USERNAME = models.CharField(max_length=200)
+    FIRSTNAME = models.CharField(max_length=200)
+    LASTNAME = models.CharField(max_length=200)
+    EMAIL = models.EmailField(max_length=100)
     PASSWORD = models.CharField(max_length=256)
-    REPASSWORD = models.CharField(max_length=256)
-    PHONE = models.IntegerField()
-    ADDRESS = models.CharField(max_length=400, null=True)
-    STATE = models.CharField(max_length=8, choices =
-    TYPE_CHOICES, default = 'STUDENT', null=True,)
-    POSTCODE = models.IntegerField()
-    ACCOUNTNO = models.IntegerField(primary_key=True)
+    ADDRESS = models.CharField(max_length=200, null=True)
+    TYPE = models.CharField(max_length=8, choices = TYPE_CHOICES, default = 'STUDENT', null=True,)
     def __unicode__(self):
         return self.USERNAME

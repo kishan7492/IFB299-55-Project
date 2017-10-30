@@ -7,6 +7,7 @@ from IFB299Project.models import Placeinformation
 from IFB299Project.models import users
 
 
+
 def index(request, *args, **kwargs):
     placelist = Placeinformation.objects.all()
     context_dict = {'Places': placelist}
