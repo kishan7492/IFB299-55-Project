@@ -23,8 +23,12 @@
                     <h1 id="logo-name">SERCHO</h1>
                     </a>
                 </div>
-                    <input id="search-box" type="text" placeholder=" Search Here" >
-                    <button id="search-button" type="submit" value="submit" name="search-button"><i class="fa fa-search" aria-hidden="true" style="font-size:45px;"></i></button>
+                    <form  action="{% url 'searchresult'%}" method="get" accept-charset="utf-8">
+                    <input id="search-box" name="q" type="text" placeholder="Search Here" id="main-search-box" >
+                    <button id="search-button" type="submit" id="main-search-button">
+                    <i class="fa fa-2x fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
                 <div id="signin-buttons">
                    {% if username %}
                                 <a>Hi {{ username}}! </a>

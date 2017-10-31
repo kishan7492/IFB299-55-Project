@@ -9,11 +9,11 @@
             <link href="{% static "CSS/maincss.css" %}" rel="stylesheet" type="text/css"/>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
-        <body>
+        <body  style="background: url('{% static "images/background.jpg" %}')">
             <div id="top-header">
                 <div id="topbar-content">
                     <div id="logo">
-                        <img id="logo-image" src="{% static "images/smartcitylogo.png" %}" alt="Picture of Rango" /> <!-- New line -->
+                        <img id="logo-image" src="{% static "images/smartcitylogo.png" %}"/> <!-- New line -->
                         <a href="{% url 'mainpage' %} ">
                             <h1 id="logo-name">SERCHO</h1>
                         </a>
@@ -32,10 +32,9 @@
             </div>
             <div id="content">
 
-
                 <form id="main-search" action="{% url 'searchresult'%}" method="get" accept-charset="utf-8">
                     <input class="searchfield" name="q" type="text" placeholder="Search Here" id="main-search-box" >
-                    <button class="searchbutton" type="submit" id="main-search-button">
+                    <button class="searchbutton"  type="submit" id="main-search-button">
                     <i class="fa fa-2x fa-search" aria-hidden="true"></i>
                     </button>
                 </form>
