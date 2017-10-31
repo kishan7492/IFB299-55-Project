@@ -23,6 +23,8 @@ def show_resulttt(request):
         # So the .get() method returns one model instance or raises an exception.
         #keywords = self.request.GET.get(queryyy)
         query = request.GET.get('q')
+        #qwj = request.GET.get('username1')
+
         result = Placeinformation.objects.filter(Placename__contains= query)
         # Retrieve all of the associated pages.
         # Note that filter() will return a list of page objects or an empty list

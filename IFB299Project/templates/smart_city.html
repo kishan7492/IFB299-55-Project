@@ -33,7 +33,9 @@
             <div id="content">
 
                 <form id="main-search" action="{% url 'searchresult'%}" method="get" accept-charset="utf-8">
-                    <input class="searchfield" name="q" type="text" placeholder="Search Here" id="main-search-box" >
+                    <input text="searchfield" name="username1" type="text" id="main-search-box" value="Welcome to Smartcity {{ username}}" readonly><br><br>
+                    <input class="searchfield" name="q" type="text" placeholder="Search Here For {{firstname}} Places" id="main-search-box" >
+
                     <button class="searchbutton"  type="submit" id="main-search-button">
                     <i class="fa fa-2x fa-search" aria-hidden="true"></i>
                     </button>
