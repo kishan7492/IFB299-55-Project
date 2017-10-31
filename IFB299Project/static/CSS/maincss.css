@@ -128,7 +128,7 @@ select, #main-search-box:-ms-input-placeholder, #postcode:-ms-input-placeholder 
     float: left;
 }
 #main-search-button{
-    background-color: transparent;
+    background-color: white;
     color: lightgray;
     font-weight: 100;
     border: solid 0.5px lightgray;
