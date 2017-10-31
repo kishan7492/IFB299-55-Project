@@ -406,3 +406,7 @@ body > #footer > #quick-links > #quick-links-table > tbody > tr > th:hover, body
     text-decoration: none;
 }
 
+.result-des{
+    font-weight: bold;
+    color: purple;
+}

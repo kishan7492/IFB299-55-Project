@@ -75,39 +75,40 @@
             </div>
         </div>
     <script>
-    var uluru = {lat: -25.363, lng: 131.044};
-        {% if result %}
+        function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+            {% if result %}
+            var markers = [
+                {% for Placeinformations in result %}
+                    [{{ Placeinformations.long }},{{ Placeinformations.lat }}],
+                {% endfor %}
+            {% endif %}
+              ];
 
-      var markers = [
-         {% for Placeinformations in result %}
-          [{{ Placeinformations.lat }},{{ Placeinformations.long }}]
-          {% endfor %}
-          {% endif %}
-      ];
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: uluru,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+              });
 
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
-        center: uluru,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      });
+            var infowindow = new google.maps.InfoWindow();
 
-      var infowindow = new google.maps.InfoWindow();
+            var marker, i;
 
-      var marker, i;
+            for (i = 0; i < markers.length; i++) {
+                marker = new google.maps.Marker({
+                position: new google.maps.LatLng(markers[i][0], markers[i][1]),
+                map: map
+                });
 
-      for (i = 0; i < markers.length; i++) {
-        marker = new google.maps.Marker({
-          position: new google.maps.LatLng(markers[i][0], markers[i][1]),
-          map: map
-        });
-
-        google.maps.event.addListener(marker, 'click', (function(marker, i) {
-          return function() {
-            infowindow.setContent(markers[i][2]);
-            infowindow.open(map, marker);
-          }
-        })(marker, i));
-      }
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(markers[i][1]);
+                    infowindow.open(map, marker);
+                }
+                })(marker, i));
+            }
+        }
     </script>
 
     </body>

@@ -43,12 +43,19 @@
                 <p>{{ result.Placename }}</p>
                 </div>
                 <div >
-                <img src="image/RBWH.jpg" id="result-image">
+                <iframe
+                      width="750px"
+                      height="390"
+                      id="mapofresult"
+                      frameborder="0" style="border:1px solid black;"
+                      src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBEW-ZnvX-XxsKYsqvCfi3U-Gh6LbuO4Ss&q={{ result.long }},{{ result.lat }}" allowfullscreen>
+                    </iframe>
                 </div>
                 <div id="result-info">
                     <p id="resultinfo">Information About Place</p>
-                    <p style="margin:10px"> Address : {{ result.address }} </p>
-                    <p style="margin:10px;">Type of the place : {{ result.Placename }}</p>
+                    <p style="margin:10px"> <span class="result-des">Address : </span>{{ result.address }} </p>
+                    <p style="margin:10px;"><span class="result-des">Type of the place : </span>{{ result.Placename }}</p>
+                    <p style="margin:10px;"><span class="result-des">Description :</span> {{ result.description }}</p>
 
                 </div>
                 <div id="userreview-input">
