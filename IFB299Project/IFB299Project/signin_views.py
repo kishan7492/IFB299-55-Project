@@ -8,6 +8,7 @@ from forms import LoginForm
 import hashlib
 from django.shortcuts import render
 from django.contrib.auth.views import logout
+from django.contrib.sessions.backends.db import SessionStore
 
 def index(request, *args, **kwargs):
     context = RequestContext(request)
@@ -49,11 +50,17 @@ def signin(request):
             try:
                 if isValidUser:
                     querySet = NEWACCOUNT.objects.get(USERNAME=username)# Obtaining the account detaild matching the submitted ACCOUNTNO
+                    querySet.save()
                     context = {
 
                         "username":username,
+
                     }
-                    return render(request, 'smart_city.html', context)
+                    s = SessionStore()
+                    s.create()
+                    return render(request,'smart_city.html',context)
+
+
                 else:
                     raise ValueError('Incorrect Login Details. Please enter correct entries.')
             except ValueError as error:

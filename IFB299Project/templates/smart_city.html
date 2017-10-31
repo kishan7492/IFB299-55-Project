@@ -18,14 +18,14 @@
                             <h1 id="logo-name">SERCHO</h1>
                         </a>
                     <div id="signin-buttons">
-
-                                <a>Hi {{ username }}! </a>
+                        {% if username %}
+                                <a>Hi {{ username}}! </a>
                                   <a href="{% url 'logout' %}">Logout</a>
+                        {% else %}
+                            <a href="{% url 'signin' %}">Login</a>
+                            <a href="{% url 'signup' %}">Sign up</a>
+                        {% endif %}
 
-                                  <a href="{% url 'signin' %}">Login</a>
-
-
-                        <a href="{% url 'signup' %}">Sign up</a>
                     </div>
                 </div>
 

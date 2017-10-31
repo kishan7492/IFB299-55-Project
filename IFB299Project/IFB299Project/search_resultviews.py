@@ -4,7 +4,7 @@ from django.views.generic.base import *
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from IFB299Project.models import Placeinformation
-
+from IFB299Project.signin_views import signin
 
 
 def index(request, *args, **kwargs):
@@ -14,7 +14,7 @@ def index(request, *args, **kwargs):
                               context_dict)
 
 def show_resulttt(request):
-
+    context = RequestContext(signin(request))
     context_dict = {}
 
     try:
@@ -38,4 +38,4 @@ def show_resulttt(request):
     # Go render the response and return it to the client.
 
 
-    return render_to_response('search_result_page.html', context_dict)
+    return render_to_response('search_result_page.html', context_dict,context)

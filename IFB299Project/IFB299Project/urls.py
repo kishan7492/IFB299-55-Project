@@ -24,12 +24,13 @@ from IFB299Project import searchtestview
 from django.conf.urls import *
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.template import RequestContext
 from IFB299Project import signup_views as signup_views
 
 from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth.views import logout
+
 
 
 urlpatterns = [
