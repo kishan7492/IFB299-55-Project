@@ -57,6 +57,6 @@ class NEWACCOUNT(models.Model):
     EMAIL = models.EmailField(max_length=100)
     PASSWORD = models.CharField(max_length=256)
     ADDRESS = models.CharField(max_length=200, null=True)
-    TYPE = models.CharField(max_length=8, choices = TYPE_CHOICES, default = 'STUDENT', null=True,)
+    TYPE = models.CharField(max_length=8, choices = TYPE_CHOICES, default = 'STUDENT', null=False,)
     def __unicode__(self):
         return self.USERNAME

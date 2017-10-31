@@ -26,12 +26,12 @@
                     <input id="search-box" type="text" placeholder=" Search Here" >
                     <button id="search-button" type="submit" value="submit" name="search-button"><i class="fa fa-search" aria-hidden="true" style="font-size:45px;"></i></button>
                 <div id="signin-buttons">
-                   {% if user.is_authenticated %}
-                            <a>Hi {{ user.username }}! </a>
-                              <a href="{% url 'logout' %}">Logout</a>
-                            {% else %}
-                              <a href="{% url 'signin' %}">Login</a>
-                            {% endif %}
+                   {% if authenticate == true %}
+                       <a>Hi {{ username }}! </a>
+                       <a href="{% url 'logout' %}">Logout</a>
+                   {% else %}
+                      <a href="{% url 'signin' %}">Login</a>
+                   {% endif %}
                 </div>
             </div>
         </div>
@@ -41,16 +41,14 @@
               <form method="post" id="signup" class="signupinput" style="align-content: center">
                     {% csrf_token %}
                     {% for field in form %}
-                          <p id="userid">
-                            {{ field.label_tag }}<br>
-                            {{ field }}
-                            {% if field.help_text %}
-                            {% endif %}
-                            {% for error in field.errors %}
-                              <p style="color: red">{{ error }}</p>
-                            {% endfor %}
-
-                        {% endfor %}
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">{{ field.label_tag }}</label>
+                            <span class="col-sm-10">{{ field }}</span>
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <span class="text-danger small">{{ field.errors }}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
                     <button type="submit" id="signupsubmit">Sign up</button>
 
 

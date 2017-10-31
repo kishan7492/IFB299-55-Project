@@ -19,7 +19,12 @@
                         </a>
                     <div id="signin-buttons">
 
-                        <a href="{% url 'signin' %}">Sign in</a>
+                                <a>Hi {{ username }}! </a>
+                                  <a href="{% url 'logout' %}">Logout</a>
+
+                                  <a href="{% url 'signin' %}">Login</a>
+
+
                         <a href="{% url 'signup' %}">Sign up</a>
                     </div>
                 </div>
