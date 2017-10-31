@@ -53,11 +53,9 @@
                   {% for Placeinformations in result %}
                     <tr >
                         <td id="search-results">
+
                             <a id="search-result-heading" href="show_result/{{ Placeinformations.id }}">{{ Placeinformations.Placename }}</a>
-                            <a id="search-result-heading" href="show_result/{{ Placeinformations.id }}">{{ Placeinformations.id }}</a>
-                            <a id="search-result-heading" href="show_result/{{ Placeinformations.id }}">{{ Placeinformations.id }}</a>
-                            <p style="color: black"><span id="address">ADDRESS: </span></p>
-                            <p style="color: black">Parkcode:  </p>
+                            <p style="color: black"><span id="address">ADDRESS: {{ Placeinformations.address }} </span></p>
 
                         </td>
                     </tr>
@@ -82,7 +80,7 @@
         </div>
     <script>
         function initMap() {
-            var uluru = {lat: -25.363, lng: 131.044};
+            var uluru = {lat: -27.469705, lng: 153.025202};
             {% if result %}
             var markers = [
                 {% for Placeinformations in result %}
@@ -90,9 +88,8 @@
                 {% endfor %}
             {% endif %}
               ];
-
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 13,
+                zoom: 11,
                 center: uluru,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
               });
