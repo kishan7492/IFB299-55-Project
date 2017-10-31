@@ -4,6 +4,7 @@ from django.views.generic.base import *
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from IFB299Project.models import Placeinformation
+from IFB299Project.models import NEWACCOUNT
 from IFB299Project.signin_views import signin
 
 
@@ -22,15 +23,19 @@ def show_resulttt(request):
         # If we can't, the .get() method raises a DoesNotExist exception.
         # So the .get() method returns one model instance or raises an exception.
         #keywords = self.request.GET.get(queryyy)
+        user = request.GET.get('username1')
+        userinfo = NEWACCOUNT.objects.get(USERNAME=user)
+        usertype=userinfo.TYPE
         query = request.GET.get('q')
-        #qwj = request.GET.get('username1')
+        user = request.GET.get('username1')
 
-        result = Placeinformation.objects.filter(Placename__contains= query)
+        result = Placeinformation.objects.filter(Placename__contains=query)
+        result1 = result.filter(typeOfPlace__contains=usertype)
         # Retrieve all of the associated pages.
         # Note that filter() will return a list of page objects or an empty list
         ###pages = Page.objects.filter(category=category)
         # Adds our results list to the template context under name pages.
-        context_dict = {'result': result}
+        context_dict = {'result': result1}
         # We also add the category object from
         # the database to thcontext dictionary.
         # We'll use this in the template to verify that the category exists. context_dict['category'] = category
