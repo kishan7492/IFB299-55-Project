@@ -16,7 +16,7 @@ class CreateAccount(forms.Form):
     PASSWORD = forms.CharField(widget=forms.PasswordInput)
     REPASSWORD = forms.CharField(widget=forms.PasswordInput, label='Confirm Password')
     ADDRESS = forms.CharField(max_length=200, label='Address')
-    TYPE = forms.ChoiceField(choices=TYPE_CHOICES,label='TYpe')
+    TYPE = forms.ChoiceField(choices=TYPE_CHOICES,label='Type')
 
     class Meta:
         model = NEWACCOUNT

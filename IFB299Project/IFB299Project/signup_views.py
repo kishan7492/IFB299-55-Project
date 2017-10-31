@@ -31,6 +31,7 @@ def signup(request):
             firstname = data['FIRSTNAME']
             lastname = data['LASTNAME']
             email = data['EMAIL']
+            type = data['TYPE']
             try:
                 if rawPassword != confirmPass:
                     raise ValueError('Passwords do not match. Please ensure password and confirm password are the same!')
