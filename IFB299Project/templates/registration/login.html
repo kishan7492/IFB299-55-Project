@@ -29,7 +29,7 @@
                     <button id="search-button" type="submit" id="main-search-button">
                     <i class="fa fa-2x fa-search" aria-hidden="true"></i>
                     </button>
-                </form>
+
                 <div id="signin-buttons">
                     {% if username %}
                         <a>Hi {{ username}}! </a>
@@ -37,6 +37,7 @@
                     {% else %}
                         <a href="{% url 'signup' %}">Sign up</a>
                     {% endif %}
+                </form>
                 </div>
             </div>
         </div>

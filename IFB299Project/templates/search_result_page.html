@@ -26,7 +26,7 @@
                     <button id="search-button" type="submit" id="main-search-button">
                     <i class="fa fa-2x fa-search" aria-hidden="true"></i>
                     </button>
-                </form>
+
 
                 <div id="signin-buttons">
                      {% if username %}
@@ -36,6 +36,7 @@
                             <a href="{% url 'signin' %}">Login</a>
                             <a href="{% url 'signup' %}">Sign up</a>
                      {% endif %}
+                </form>
                 </div>
             </div>
         </div>
