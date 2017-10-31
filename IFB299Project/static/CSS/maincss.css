@@ -323,6 +323,7 @@ input {
     display: block;
     text-align: center;
     font-size: 25px;
+    font-weight: bold;
 }
 #review-input{
     height: 100px;
