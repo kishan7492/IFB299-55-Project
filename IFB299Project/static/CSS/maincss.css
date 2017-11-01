@@ -411,3 +411,101 @@ body > #footer > #quick-links > #quick-links-table > tbody > tr > th:hover, body
     font-weight: bold;
     color: purple;
 }
+#id_PASSWORD{
+    border-radius: 0.4em;
+    box-shadow: none;
+    margin: 8px;
+    margin-left: 0;
+    border-width: 1px;
+    border-style:ridge;
+    height: 30px;
+    width: 280px;
+    font-size: 14px;
+}
+#id_USERNAME{
+    border-radius: 0.4em;
+    box-shadow: none;
+    margin: 8px;
+    margin-left: 0;
+    border-width: 1px;
+    border-style:ridge;
+    height: 30px;
+    width: 280px;
+    font-size: 14px;
+}
+#id_FIRSTNAME{
+    border-radius: 0.4em;
+    box-shadow: none;
+    margin: 8px;
+    margin-left: 0;
+    border-width: 1px;
+    border-style:ridge;
+    height: 30px;
+    width: 280px;
+    font-size: 14px;
+}
+#id_LASTNAME{
+    border-radius: 0.4em;
+    box-shadow: none;
+    margin: 8px;
+    margin-left: 0;
+    border-width: 1px;
+    border-style:ridge;
+    height: 30px;
+    width: 280px;
+    font-size: 14px;
+}
+#id_EMAIL{
+    border-radius: 0.4em;
+    box-shadow: none;
+    margin: 8px;
+    margin-left: 0;
+    border-width: 1px;
+    border-style:ridge;
+    height: 30px;
+    width: 280px;
+    font-size: 14px;
+}
+#id_REPASSWORD{
+    border-radius: 0.4em;
+    box-shadow: none;
+    margin: 8px;
+    margin-left: 0;
+    border-width: 1px;
+    border-style:ridge;
+    height: 30px;
+    width: 280px;
+    font-size: 14px;
+}
+#id_ADDRESS{
+    border-radius: 0.4em;
+    box-shadow: none;
+    margin: 8px;
+    margin-left: 0;
+    border-width: 1px;
+    border-style:ridge;
+    height: 30px;
+    width: 280px;
+    font-size: 14px;
+}
+#id_TYPE{
+    border-radius: 0.4em;
+    box-shadow: none;
+    margin: 8px;
+    margin-left: 0;
+    border-width: 1px;
+    border-style:ridge;
+    height: 30px;
+    width: 200px;
+    font-size: 14px;
+}
+#adminbutton{
+    background-color: #800080;
+    font-weight: bold;
+    border-radius: 0.5em;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: -18px;
+    position: relative;
+}

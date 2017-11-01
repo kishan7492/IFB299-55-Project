@@ -20,6 +20,7 @@ from IFB299Project import signup_views
 from IFB299Project import signin_views
 from IFB299Project import resultviews
 from IFB299Project import search_resultviews
+from IFB299Project import aboutview
 from IFB299Project import searchtestview
 from django.conf.urls import *
 from django.conf import settings
@@ -34,10 +35,12 @@ from django.contrib.auth.views import logout
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^login/admin/', admin.site.urls, name='jeje'),
     url(r'^mainviews', mainviews.index, name='mainpage'),
     url(r'^$', mainviews.index, name='mainpage'),
     url(r'^signup/$', signup_views.signup, name='signup'),
+
+    url(r'^about/$', aboutview.index, name='about'),
 
    # url(r'^login/$', signin_views.login, name='signin'),
 

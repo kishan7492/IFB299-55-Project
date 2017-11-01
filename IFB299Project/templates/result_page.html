@@ -59,7 +59,7 @@
                 <div id="result-info">
                     <p id="resultinfo">Information About Place</p>
                     <p style="margin:10px"><span class="result-des"> Address :</span> {{ result.address }} </p>
-                    <p style="margin:10px;"><span class="result-des">Type of the place :</span> {{ result.Placename }}</p>
+                    <p style="margin:10px;"><span class="result-des">Type of the place :</span> {{ result.typeOfPlace }}</p>
                     <p style="margin:10px;"><span class="result-des">Description :</span> {{ result.description }}</p>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                   <tr>
                     <th><a href="{% url 'signin' %}">Sign in</a></th>
                     <th><a href="{% url 'signup' %}">Sign up</a></th>
-                    <th><a href="">About Us</a></th>
+                    <th><a href="{% url 'about' %}">About Us</a></th>
                   </tr>
                 </table>
             </div>
