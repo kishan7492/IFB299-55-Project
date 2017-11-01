@@ -7,9 +7,7 @@
     <title>Results</title>
         <link href="{% static "CSS/maincss.css" %}" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     </head>
-
     <body>
         <div id="top-header">
             <div id="topbar-content">
@@ -26,7 +24,7 @@
                     <button id="search-button" type="submit" id="main-search-button">
                     <i class="fa fa-4x fa-search" aria-hidden="true"></i>
                     </button>
-
+                    <input text="searchfield" name="username" type="text"  value="{{username}}" readonly style="visibility: hidden">
                 <div id="signin-buttons">
                      {% if user.is_authenticated %}
                             <a>Hi {{ user.username }}! </a>
@@ -35,6 +33,7 @@
                               <a href="{% url 'signin' %}">Login</a>
                             {% endif %}
                     <a href="{% url 'signup' %}">Sign up</a>
+                </div>
                 </form>
                 </div>
             </div>

@@ -26,7 +26,7 @@
                     <button id="search-button" type="submit" id="main-search-button">
                     <i class="fa fa-4x fa-search" aria-hidden="true"></i>
                     </button>
-
+                    <input text="searchfield" name="username" type="text"  value="{{username}}" readonly style="visibility: hidden">
 
                 <div id="signin-buttons">
                      {% if username %}
@@ -36,6 +36,7 @@
                             <a href="{% url 'signin' %}">Login</a>
                             <a href="{% url 'signup' %}">Sign up</a>
                      {% endif %}
+                </div>
                 </form>
                 </div>
             </div>
@@ -47,17 +48,18 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB_iesKkPt3nROMf0Vlgwln3ZERTDCE5I&callback=initMap">
             </script>
             <hr style="margin:3px; width:100%;" >
-            <table >
+            <table align="center">
                 <tbody>
                 {% if result %}
                   {% for Placeinformations in result %}
-                    <tr >
-                        <td id="search-results">
+                    <tr align="center">
+                        <td id="search-results" align="center">
 
                             <a id="search-result-heading" href="show_result/{{ Placeinformations.id }}">{{ Placeinformations.Placename }}</a>
                             <p style="color: black"><span id="address">ADDRESS: {{ Placeinformations.address }} </span></p>
 
                         </td>
+
                     </tr>
                     {% endfor %}
                         {% else %}

@@ -19,13 +19,18 @@ def show_resulttt(request):
     context_dict = {}
 
     try:
-        user = request.GET.get('username1')
-        userinfo = NEWACCOUNT.objects.get(USERNAME=user)
-        usertype=userinfo.TYPE
+        user = request.GET.get('username')
         query = request.GET.get('q')
-        resultwithquery = Placeinformation.objects.filter(Placename__contains=query)
-        result = resultwithquery.filter(typeOfPlace__contains=usertype)
-        context_dict = {'result': result}
+
+        if(user!=''):
+            userinfo = NEWACCOUNT.objects.get(USERNAME=user)
+            usertype = userinfo.TYPE
+            resultwithquery = Placeinformation.objects.filter(Placename__contains=query)
+            result = resultwithquery.filter(typeOfPlace__contains=usertype)
+            context_dict = {'result': result}
+        else:
+            resultwithquery = Placeinformation.objects.filter(Placename__contains=query)
+            context_dict = {'result': resultwithquery}
     except Placeinformation.DoesNotExist:
 
         context_dict['result'] = None

@@ -24,10 +24,12 @@
                     </a>
                 </div>
                     <form  action="{% url 'searchresult'%}" method="get" accept-charset="utf-8">
+
                     <input id="search-box" name="q" type="text" placeholder="Search Here" id="main-search-box" >
                     <button id="search-button" type="submit" id="main-search-button">
                     <i class="fa fa-4x fa-search" aria-hidden="true"></i>
                     </button>
+                    <input text="searchfield" name="username" type="text"  value="{{username}}" readonly style="visibility: hidden">
 
                 <div id="signin-buttons">
                    {% if username %}

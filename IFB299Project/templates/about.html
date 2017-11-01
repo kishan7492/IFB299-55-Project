@@ -1,27 +1,91 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About us</title>
+    <title>Results</title>
+        <link href="{% static "CSS/maincss.css" %}" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+    <body>
+        <div id="top-header">
+            <div id="topbar-content">
+                <div id="logo">
+                    <img id="logo-image"src="{% static "images/smartcitylogo.png" %}">
+                </div>
+                <div>
+                    <a href="{% url 'mainpage' %} ">
+                    <h1 id="logo-name">SERCHO</h1>
+                    </a>
+                </div>
+                <form  action="{% url 'searchresult'%}" method="get" accept-charset="utf-8">
+                    <input id="search-box" name="q" type="text" placeholder="Search Here" id="main-search-box" >
+                    <button id="search-button" type="submit" id="main-search-button">
+                        <i class="fa fa-4x fa-search" aria-hidden="true"></i>
+                    </button>
+                    <input text="searchfield" name="username" type="text"  value="{{username}}" readonly style="visibility: hidden">
+                    <div id="signin-buttons">
+                         {% if user.is_authenticated %}
+                                <a>Hi {{ user.username }}! </a>
+                                  <a href="{% url 'logout' %}">Logout</a>
+                                {% else %}
+                                  <a href="{% url 'signin' %}">Login</a>
+                                {% endif %}
+                        <a href="{% url 'signup' %}">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+            <table align="center">
+                <tbody>
+                    <tr align="center">
+                        <td id="search-results" align="center">
 
-<p style="color:black;">Developer - Arshdeep Singh</p>
-<p style="color:black;">Description: Arsh is a full time information technology student, majoring in computer science. He was a developer for this project</p>
-<p style="color:black;">Email: arshdeep.singh@connect.qut.edu.au</p>
+                            <p>Kishan Virani â€“ Developer</p>
+                            <p style="color:black;">Description: Kishan is a full time information technology student, majoring in computer science. He is a developer for this project</p>
+                            <p style="color:black;">Email: Kishanmansukhal.virani@connect.qut.edu.au</p>
 
 
-<p style="color:black;">Allen Joseph â€“ Client.</p>
-<p style="color:black;">Descripton: Allen is a full time information technology student, majoring in information systems. He was the client for this project  Client.</p>
-<p style="color:black;">Email: allen.joseph@connect.qut.edu.au</p>
+                        </td>
+                        <td id="search-results" align="center">
 
-<p style="color:black;">Kishan Virani â€“ Developer</p>
-<p style="color:black;">Description: Kishan is a full time information technology student, majoring in computer science. He was a developer for this project</p>
-<p style="color:black;">Email: Kishanmansukhal.virani@connect.qut.edu.au</p>
+                            <p style="color:black;">Developer - Arshdeep Singh</p>
+            <p style="color:black;">Description: Arsh is a full time information technology student, majoring in computer science. He is a developer for this project</p>
+            <p style="color:black;">Email: arshdeep.singh@connect.qut.edu.au</p>
 
-<p style="color:black;">Shivam Sachdeva â€“ Scrum master</p>
-<p style="color:black;">Description: Shivam is a full time information technology student, majoring in computer science. He was a scrum master for this project</p>
-<p style="color:black;">Email: Shivam.sachdeva@connect.qut.edu.au</p>
+                        </td>
 
-</body>
+                    </tr>
+
+                </tbody>
+            </table>
+            <p style="color:black;">Kishan Virani â€“ Developer</p>
+            <p style="color:black;">Description: Kishan is a full time information technology student, majoring in computer science. He is a developer for this project</p>
+            <p style="color:black;">Email: Kishanmansukhal.virani@connect.qut.edu.au</p>
+
+            <p style="color:black;">Developer - Arshdeep Singh</p>
+            <p style="color:black;">Description: Arsh is a full time information technology student, majoring in computer science. He is a developer for this project</p>
+            <p style="color:black;">Email: arshdeep.singh@connect.qut.edu.au</p>
+
+            <p style="color:black;">Allen Joseph â€“ Client.</p>
+            <p style="color:black;">Descripton: Allen is a full time information technology student, majoring in information systems. He is the client for this project  Client.</p>
+            <p style="color:black;">Email: allen.joseph@connect.qut.edu.au</p>
+
+            <p style="color:black;">Shivam Sachdeva â€“ Scrum master</p>
+            <p style="color:black;">Description: Shivam is a full time information technology student, majoring in computer science. He is a scrum master for this project</p>
+            <p style="color:black;">Email: Shivam.sachdeva@connect.qut.edu.au</p>
+
+        <div id="footer">
+            <div id="quick-links">
+                <table id="quick-links-table">
+                    <tr>
+                        <th><a href="{% url 'signin' %}">Sign in</a></th>
+                        <th><a href="{% url 'signup' %}">Sign up</a></th>
+                        <th><a href="{% url 'about' %}">About Us</a></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </body>
 </html>
