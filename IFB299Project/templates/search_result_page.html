@@ -18,7 +18,7 @@
                 </div>
                 <div>
                     <a href="{% url 'mainpage' %} ">
-                    <h1 id="logo-name">SERCHO</h1>
+                    <h1 id="logo-name">Smart City</h1>
                     </a>
                 </div>
                     <form  action="{% url 'searchresult'%}" method="get" accept-charset="utf-8">
@@ -82,17 +82,17 @@
         </div>
     <script>
         function initMap() {
-            var uluru = {lat: -27.469705, lng: 153.025202};
+            var brisbane = {lat: -27.469705, lng: 153.025202};
             {% if result %}
             var markers = [
                 {% for Placeinformations in result %}
-                    [{{ Placeinformations.long }},{{ Placeinformations.lat }}],
+                    [{{ Placeinformations.long }},{{ Placeinformations.lat }},`{{ Placeinformations.Placename }}`],
                 {% endfor %}
             {% endif %}
               ];
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 11,
-                center: uluru,
+                center: brisbane,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
               });
 
@@ -108,7 +108,7 @@
 
                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
-                    infowindow.setContent(markers[i][1]);
+                    infowindow.setContent(markers[i][2]);
                     infowindow.open(map, marker);
                 }
                 })(marker, i));
